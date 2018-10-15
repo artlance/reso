@@ -1,0 +1,311 @@
+/* responsive */
+@include media-breakpoint-down(xl) {}
+@include media-breakpoint-down(lg) {
+    .services {
+        margin-bottom: 50px;
+    }
+    .service-title,
+    .service-info,
+    .service-note {
+        padding: 10px 20px;
+    }
+    .service-note {
+        left: -25px;
+        right: -25px;
+    }
+    .features {
+        padding-bottom: 22px;
+    }
+    .faq {
+        padding: 22px 0 30px;
+    }
+    .program-table {
+        margin-right: -30px;
+    }
+}
+@include media-breakpoint-down(md) {
+    .container,
+    .container-fluid {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .advantages {
+        padding: 30px 0 18px;
+    }
+    .advantages-item {
+        flex-wrap: wrap;
+    }
+    .advantages-item-img {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-right: 0;
+        margin-bottom: 19px;
+    }
+    .advantages-item-title {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .services {
+        padding-top: 32px;
+    }
+    .service-title,
+    .service-info,
+    .service-note {
+        padding: 15px 25px;
+    }
+    .service-note {
+        left: -15px;
+        right: -15px;
+    }
+    .features-item {
+        align-items: center;
+        text-align: left;
+        min-height: 125px;
+        padding-top: 15px;
+        padding-left: 30px;
+    }
+    .features-item-img {
+        flex: 0 0 76px;
+        max-width: 76px;
+        padding-right: 10px;
+        margin-bottom: 0;
+    }
+    .features-item-title {
+        flex: 1 1 auto;
+        max-width: calc(100% - 76px);
+        min-height: 0;
+    }
+    .faq {
+        padding-top: 32px;
+    }
+    .program-table {
+        margin-right: -20px;
+    }
+}
+@include media-breakpoint-down(sm) {
+    .container,
+    .container-fluid {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .navigation {
+        position: relative;
+        height: 50px;
+    }
+    .menu-wrapper {
+        display: none;
+    }
+    .navigation-open {
+        .menu-wrapper {
+            display: block;
+            position: absolute;
+            left: -15px;
+            right: -15px;
+            top: 0;
+            padding: 50px 15px;
+            background: $w;
+            height: 100vh;
+            overflow: auto;
+        }
+    }
+    .menu {
+        margin: 0;
+        text-align: left;
+        & > li {
+            display: block;
+            &:first-child {
+                border-top: 1px solid #ebebeb;
+            }
+            & > a {
+                padding: 9px 0 10px;
+                border-bottom: 1px solid #ebebeb;
+            }
+        }
+    }
+    .navigation-toggle {
+        display: block;
+    }
+    .hero {
+        position: relative;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.8);
+        }
+        .row {
+            min-height: 0;
+        }
+    }
+    .hero-content {
+        padding: 32px 0 30px;
+        h1 {
+            font-size: 26px;
+            margin-bottom: 13px;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+    }
+    .advantages {
+        padding: 17px 0 0;
+    }
+    .advantages-item {
+        padding: 2px 0 15px;
+    }
+    .advantages-item-img {
+        margin-bottom: 6px;
+    }
+    .advantages-item-title {
+        font-size: 14px;
+        line-height: 1.572;
+    }
+    .services {
+        margin-bottom: 20px;
+        padding-top: 18px;
+        padding-bottom: 30px;
+        h2 {
+            font-size: 26px;
+            margin-bottom: 13px;
+        }
+    }
+    .services-content {
+        max-width: 420px;
+        margin: 0 auto;
+    }
+    .services-list {
+        padding-bottom: 25px;
+    }
+    .service {
+        margin-bottom: 5px;
+        padding-top: 44.83%;
+        background-position: 100% 100%;
+        background-size: 55%;
+        &.service-wide {
+            padding-top: 44.83%;
+            background-size: 90%;
+        }
+        &.service-mobile-4 {
+            background-image: url('../upload/service-4-mobile.jpg') !important;
+            background-size: cover;
+        }
+        &.service-mobile-6 {
+            background-image: url('../upload/service-6-mobile.jpg') !important;
+            background-size: cover;
+        }
+        &.service-mobile-8 {
+            background-image: url('../upload/service-8-mobile.jpg') !important;
+            background-size: cover;
+        }
+    }
+    .service-title,
+    .service-info,
+    .service-note {
+        padding: 16px 20px;
+    }
+    .service-info {
+        font-size: 14px;
+        line-height: 1.572;
+    }
+    .service-note {
+        left: -10px;
+        right: -10px;
+        margin-bottom: 5px;
+        font-size: 14px;
+        line-height: 1.572;
+        &:before {
+            height: 5px;
+        }
+    }
+    .services-more {
+        a.button {
+            width: 100%;
+        }
+    }
+    .features {
+        padding-bottom: 16px;
+    }
+    .features-item {
+        padding-left: 20px;
+        max-width: 420px;
+        margin: 0 auto;
+    }
+    .features-slider {
+        margin: 0 -15px 15px;
+    }
+    .features-slide {
+        padding: 10px 15px 20px;
+    }
+    .faq {
+        padding: 14px 0 20px;
+        h2 {
+            font-size: 26px;
+            margin-bottom: 23px;
+        }
+    }
+    .faq-item {
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+    }
+    .faq-item-question {
+        padding: 24px 35px 16px 20px;
+        font-size: 16px;
+        &:after {
+            right: 20px;
+        }
+    }
+    .faq-item-answer {
+        padding: 0 20px 3px;
+        font-size: 16px;
+        line-height: 1.5;
+        p {
+            margin-bottom: 10px;
+        }
+    }
+    .program {
+        margin-bottom: 0;
+    }
+    .program-title {
+        h2 {
+            font-size: 26px;
+            line-height: 1.31;
+            margin-bottom: 11px;
+        }
+    }
+    .modal {
+        width: 300px;
+        padding-right: 0;
+        max-width: 100%;
+        max-height: 100%;
+        overflow: auto;
+        background: $w;
+        border-radius: 5px;
+        box-shadow: 0 4px 10px rgba(0, 1, 1, 0.15);
+    }
+    .modal-close {
+        top: 5px;
+        right: 5px;
+        width: 40px;
+        height: 40px;
+        background: $tr;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    .modal-content {
+        background: $tr;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    .modal-title {
+        font-size: 26px;
+        margin-bottom: 14px;
+    }
+    .modal-info {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+}
+@include media-breakpoint-down(xs) {}

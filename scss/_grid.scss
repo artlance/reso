@@ -1,0 +1,21 @@
+/* grid */
+.main {
+    min-height: 100%;
+    overflow: hidden;
+}
+.container {
+    max-width: 1222px;
+}
+.container,
+.container-fluid {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.no-js {
+    .features-slide {
+        display: none;
+        &:first-child {
+            display: block;
+        }
+    }
+}

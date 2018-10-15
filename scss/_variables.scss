@@ -1,0 +1,31 @@
+$fontSize: 16px;
+$lineHeight: 1.5;
+$spacer: 24px;                                                    $sp: $spacer;
+$fontFamily: 'SeroPro', Helvetica, Arial, sans-serif;             $ff: $fontFamily;
+
+$duration: 0.15s;                                                 $d: $duration;
+$function: cubic-bezier(0.4, 0.0, 0.2, 1);                        $f: $function;
+$function-reverse: cubic-bezier(0.2, 0.0, 0.4, 1);                $fr: $function-reverse;
+
+$primary: #3eac51;                                                $p: $primary;
+$secondary: #ff982c;                                              $s: $secondary;
+$tertiary: #eaf0f5;                                               $t: $tertiary;
+
+$text: #333333;                                                   $txt: $text;
+$link: #3eac51;                                                   $l: $link;
+$link-hover: #5ac36c;                                             $lh: $link-hover;
+
+$white: #ffffff;                                                  $w: $white;
+$black: #000000;                                                  $b: $black;
+$dark-gray: #333333;                                              $dgr: $dark-gray;
+$gray: #aaaaaa;                                                   $gr: $gray;
+$light-gray: #f6f6f6;                                             $lgr: $light-gray;
+$green: #3eac51;                                                  $gn: $green;
+$red: #ff0000;                                                    $r: $red;
+$transparent: transparent;                                        $tr: $transparent;
+
+$default: #ff0000;
+$success: #3eac51;
+$info: #b9dfff;
+$warning: #ff982c;
+$error: #ff0000;

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-7</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon-7">
+            <path d="M45.39,8 L4.631,8 C3.66588506,8.00264743 2.7413954,8.38878471 2.06111386,9.07338013 C1.38083233,9.75797556 1.00054667,10.6848876 1.004,11.65 L1.004,38.35 C1.00123533,40.3563865 2.62461648,41.9855862 4.631,41.99 L45.394,41.99 C47.3996019,41.9844844 49.0217663,40.3556075 49.019,38.35 L49.019,11.65 C49.0224533,10.6845419 48.6418933,9.75732712 47.9611794,9.07267408 C47.2804655,8.38802105 46.3554619,8.00211747 45.39,8 Z" id="Path" fill="#20AA2F" fill-rule="nonzero"></path>
+            <rect id="Rectangle" fill="#FF982C" fill-rule="nonzero" x="3" y="14" width="44" height="2"></rect>
+            <path d="M45.39,39.99 L4.631,39.99 C3.7276631,39.9861496 2.99709209,39.2533445 2.996,38.35 L2.996,23.99 L47.026,23.99 L47.026,38.35 C47.0254533,39.2539599 46.2939559,39.9872459 45.39,39.99 Z" id="Path" fill="#FFFFFF" fill-rule="nonzero"></path>
+            <rect id="Rectangle" fill="#FF982C" fill-rule="nonzero" x="3" y="22" width="44" height="2"></rect>
+            <path d="M40,32.04 L27.938,32.04 C27.3857153,32.04 26.938,32.4877153 26.938,33.04 C26.938,33.5922847 27.3857153,34.04 27.938,34.04 L40,34.04 C40.5522847,34.04 41,33.5922847 41,33.04 C41,32.4877153 40.5522847,32.04 40,32.04 Z" id="Path" fill="#FF982C" fill-rule="nonzero"></path>
+            <path d="M4.627,10 L45.39,10 C46.2958421,10.0060565 47.0258797,10.744146 47.022,11.65 L47.0220154,14.05 L2.9919922,14.05 L2.992,11.65 C2.98923372,10.7418791 3.72288087,10.0033081 4.631,10 L4.627,10 Z" id="Path" fill="#FFFFFF" fill-rule="nonzero"></path>
+            <polygon id="Path" fill="#FFFFFF" fill-rule="nonzero" points="47.022 21.99 2.992 21.99 2.992 16.05 47.022 16.05"></polygon>
+        </g>
+    </g>
+</svg>
