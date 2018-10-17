@@ -63,3 +63,63 @@ u=a.outerHeight(!0),r=a.css("float"),h&&h.css({width:a.outerWidth(!0),height:u,d
 h.detach()),b={position:"",width:"",top:""},a.css(b).removeClass(t).trigger("sticky_kit:unstick")),B&&(b=f.height(),u+q>b&&!v&&(c-=l,c=Math.max(b-u,c),c=Math.min(q,c),m&&a.css({top:c+"px"})))):e>F&&(m=!0,b={position:"fixed",top:c},b.width="border-box"===a.css("box-sizing")?a.outerWidth()+"px":a.width()+"px",a.css(b).addClass(t),null==p&&(a.after(h),"left"!==r&&"right"!==r||h.append(a)),a.trigger("sticky_kit:stick")),m&&w&&(null==k&&(k=e+u+c>C+n),!v&&k)))return v=!0,"static"===g.css("position")&&g.css({position:"relative"}),
 a.css({position:"absolute",bottom:d,top:"auto"}).trigger("sticky_kit:bottom")},y=function(){x();return l()},H=function(){G=!0;f.off("touchmove",l);f.off("scroll",l);f.off("resize",y);b(document.body).off("sticky_kit:recalc",y);a.off("sticky_kit:detach",H);a.removeData("sticky_kit");a.css({position:"",bottom:"",top:"",width:""});g.position("position","");if(m)return null==p&&("left"!==r&&"right"!==r||a.insertAfter(h),h.remove()),a.removeClass(t)},f.on("touchmove",l),f.on("scroll",l),f.on("resize",
 y),b(document.body).on("sticky_kit:recalc",y),a.on("sticky_kit:detach",H),setTimeout(l,0)}};n=0;for(K=this.length;n<K;n++)d=this[n],J(b(d));return this}}).call(this);
+
+/* fullScreen */
+;(function($){
+    $.fn.fullScreen = function(options) {
+
+        //default settings
+        var settings = $.extend({
+            'width': false,
+            'resize': true,
+            'parent': 'body',
+            'minus': 0,
+            'reduce': 1
+        }, options);
+
+        var element = this;
+        var bodyHeight = $(settings.parent).innerHeight();
+        var bodyWidth = $(settings.parent).innerWidth();
+
+        // console.log(bodyHeight);
+
+        //width
+        if ( settings.width == true ) {
+            this.each(function() {
+                var $this = $(this);
+                $this.css('width', bodyWidth);
+            });
+            //resize (width)
+            if ( settings.resize == true ) {
+                $(window).bind('resize', function() {
+                    element.each(function() {
+                        var $this = $(this);
+                        $this.css('width', 'auto');
+                        bodyWidth= $(settings.parent).innerWidth();
+                        $this.css('width', bodyWidth);
+                    });
+                });
+            }
+        }
+
+        //height
+        this.each(function() {
+            var $this = $(this);
+            $this.css('height', (bodyHeight-settings.minus)/settings.reduce);
+        });
+
+        //resize (height)
+        if ( settings.resize == true ) {
+            $(window).bind('resize', function() {
+                element.each(function() {
+                    var $this = $(this);
+                    $this.css('height', 'auto');
+
+                    bodyHeight = $(settings.parent).innerHeight();
+
+                    $this.css('height', (bodyHeight-settings.minus)/settings.reduce);
+                });
+            });
+        }
+    };
+})(jQuery);

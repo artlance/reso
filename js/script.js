@@ -20,7 +20,7 @@ $(document).ready(function() {
     //------------------------------------------------------------------------//
 
     //navigation
-    $('.navigation-toggle').on('click', function(event) {
+    $('.navigation-toggle, .clinics-filter-toggle').on('click', function(event) {
         event.preventDefault();
         $('body').toggleClass('navigation-open');
     });
@@ -195,40 +195,42 @@ $(document).ready(function() {
     //------------------------------------------------------------------------//
 
     var select = $( "#variation" );
-    var slider = $( "<div id='variation-slider'></div>" ).insertAfter( select ).slider({
-      min: 1,
-      max: 8,
-      range: "min",
-      value: select[ 0 ].selectedIndex + 1,
-      slide: function( event, ui ) {
-        select[ 0 ].selectedIndex = ui.value - 1;
-        variation();
-      }
-    });
-
-    function variation() {
-        var sliderVal = $("#variation").val();
-        $('.variation-column li').removeClass('li-disabled');
-        $("[data-no]").each(function(index, el) {
-            var thisDataNo = $(this).data('no');
-            thisDataNo = thisDataNo + '';
-            var thisConst = thisDataNo.indexOf(sliderVal);
-            if ( thisConst != -1 ) {
-                $(this).addClass('li-disabled');
-            }
+    if (select.length) {
+        var slider = $( "<div id='variation-slider'></div>" ).insertAfter( select ).slider({
+          min: 1,
+          max: 8,
+          range: "min",
+          value: select[ 0 ].selectedIndex + 1,
+          slide: function( event, ui ) {
+            select[ 0 ].selectedIndex = ui.value - 1;
+            variation();
+          }
         });
-        $('.variation-header-item').each(function(index, el) {
-            $(this).addClass('hidden');
-            if (index+1 == sliderVal) {
-                $(this).removeClass('hidden');
-            }
+
+        function variation() {
+            var sliderVal = $("#variation").val();
+            $('.variation-column li').removeClass('li-disabled');
+            $("[data-no]").each(function(index, el) {
+                var thisDataNo = $(this).data('no');
+                thisDataNo = thisDataNo + '';
+                var thisConst = thisDataNo.indexOf(sliderVal);
+                if ( thisConst != -1 ) {
+                    $(this).addClass('li-disabled');
+                }
+            });
+            $('.variation-header-item').each(function(index, el) {
+                $(this).addClass('hidden');
+                if (index+1 == sliderVal) {
+                    $(this).removeClass('hidden');
+                }
+            });
+        }
+        variation();
+        $("#variation").on( "change", function() {
+            slider.slider( "value", this.selectedIndex + 1 );
+            variation();
         });
     }
-    variation();
-    $("#variation").on( "change", function() {
-        slider.slider( "value", this.selectedIndex + 1 );
-        variation();
-    });
 
     //------------------------------------------------------------------------//
 
@@ -275,7 +277,7 @@ $(document).ready(function() {
         maxSize: null,
         extensions: null,
         addMore: true,
-        extensions: ['pdf', 'doc', 'txt', 'jpeg', 'jpg', 'png', 'xls', 'xlsx'],
+        extensions: ['doc', 'docs', 'txt', 'xls', 'xlsx'],
         changeInput: '<div class="jFiler-input-dragDrop"><div class="jFiler-input-inner"><div class="jFiler-input-icon"></div><div class="jFiler-input-text">Перетащите сюда файлы или загрузите вручную</div></div></div>',
         showThumbs: true,
         theme: "dragdropbox",
@@ -398,6 +400,48 @@ $(document).ready(function() {
     });
 
     //------------------------------------------------------------------------//
+
+    //full screen
+    $('#map').fullScreen({
+        minus: $('.clinics-header').innerHeight() + $('.footer-global').innerHeight()
+    });
+
+    $('.clinics-list').fullScreen({
+        minus: $('.clinics-header').innerHeight() + $('.footer-global').innerHeight() + $('.clinics-search-wrapper').innerHeight()
+    });
+
+    $(window).resize(function() {
+
+        //resize
+        $('#map').fullScreen({
+            minus: $('.clinics-header').innerHeight() + $('.footer-global').innerHeight()
+        });
+
+        $('.clinics-list').fullScreen({
+            minus: $('.clinics-header').innerHeight() + $('.footer-global').innerHeight() + $('.clinics-search-wrapper').innerHeight()
+        });
+
+    });//window resize
+
+    //------------------------------------------------------------------------//
+
+    //clinics mobile
+    $('.clinics-navigation-list').on('click', function(event) {
+        event.preventDefault();
+        $('body').addClass('clinics-list-active').removeClass('clinics-map-active');
+    });
+
+    $('.clinics-navigation-on-map').on('click', function(event) {
+        event.preventDefault();
+        $('body').addClass('clinics-map-active').removeClass('clinics-list-active');
+    });
+
+    //------------------------------------------------------------------------//
+
+    $('.services-more a').on('click', function(event) {
+        event.preventDefault();
+        $('.row-hidden').removeClass('row-hidden');
+    });
 
 }); //document ready
 

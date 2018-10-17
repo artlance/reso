@@ -1,0 +1,202 @@
+.clinics-header {
+    padding: 30px 0 7px;
+    h1 {
+        font-size: 40px;
+        line-height: 1.25;
+        font-weight: 200;
+        margin-bottom: 28px;
+        strong {
+            font-weight: 200;
+            color: $p;
+        }
+    }
+}
+.clinics-filter {}
+.clinics-filter-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -25px;
+}
+.clinics-filter-caption {
+    font-size: 26px;
+    line-height: 1.154;
+    margin-bottom: 22px;
+}
+.clinics-filter-item {
+    padding: 0 25px 20px;
+}
+.clinics-filter-title {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 4px;
+}
+.clinics-filter-icon {
+    display: inline-block;
+    vertical-align: top;
+    width: 21px;
+    padding-top: 1px;
+    img {
+        display: block;
+        width: 100%;
+    }
+}
+.clinics {
+    display: flex;
+}
+.clinics-navigation {
+    padding: 0 0 22px;
+}
+.clinics-navigation-list,
+.clinics-navigation-on-map {
+    display: block;
+    font-size: 20px;
+    line-height: 1.5;
+}
+.clinics-content {
+    flex: 0 0 450px;
+    max-width: 450px;
+}
+.clinics-search-wrapper {
+    padding: 24px 30px 12px;
+    position: relative;
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: #eaeaea;
+    }
+}
+.clinics-search-caption {
+    font-size: 26px;
+    line-height: 1.31;
+    margin-bottom: 22px;
+}
+.clinics-search {
+    margin-bottom: 36px;
+    position: relative;
+    input.input-text {
+        padding-right: 49px;
+        padding-left: 19px;
+    }
+}
+.clinics-search-button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 0;
+    line-height: 0;
+    width: 50px;
+    height: 68px;
+    border: 0;
+    background: $tr url('../upload/search.svg') 7px 26px no-repeat;
+    background-size: 18px 18px;
+}
+.clinics-search-result {
+    font-size: 26px;
+    line-height: 1.31;
+    strong {
+        font-weight: 500;
+    }
+}
+.clinics-list {
+    overflow: auto;
+    min-height: 170px !important;
+}
+.clinics-item {
+    padding: 20px 30px 23px;
+    font-size: 16px;
+    line-height: 1.5625;
+    border-top: 1px solid #eaeaea;
+    transition: background-color $d $f;
+    &.active {
+        background: $t;
+    }
+}
+.clinics-item-title {
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.clinics-item-station {
+    margin-bottom: 10px;
+}
+.clinics-item-station-type {
+    display: inline-block;
+    vertical-align: top;
+    margin: 9px 6px 0 0;
+    width: 9px;
+    height: 9px;
+    background: $b;
+    border-radius: 50%;
+}
+.clinics-item-address {
+    margin-bottom: 10px;
+}
+.clinics-item-type {}
+.clinics-item-type-icon {
+    display: inline-block;
+    vertical-align: top;
+    min-width: 10px;
+    margin: 9px 5px 0 0;
+    img {
+        display: block;
+    }
+}
+.clinics-item-on-map {
+    display: none;
+}
+.clinics-map {
+    flex: 1 1 auto;
+    background: #eaeaea;
+}
+#map {
+    min-height: 100% !important;
+}
+.modal-clinic {
+    display: none;
+    position: absolute;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    background: $w;
+}
+.modal-clinic-close {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    right: 0;
+    width: 52px;
+    height: 50px;
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 11px;
+        right: 11px;
+        height: 2px;
+        margin-top: -1px;
+        background: #999999;
+        transform: rotate(45deg);
+    }
+    &:after {
+        transform: rotate(-45deg);
+    }
+}
+.modal-clinic-content {
+    font-size: 16px;
+    line-height: 1.5625;
+    padding: 20px 15px;
+}
+.modal-clinic-icon {
+    margin-bottom: 10px;
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+}
