@@ -154,8 +154,27 @@ $(document).ready(function() {
     $('.datepicker').datepicker({
         changeMonth: true,
         changeYear: true,
-        showOtherMonths: true
+        showOtherMonths: true,
+        beforeShow: function (input, inst) {
+            setTimeout(function () {
+                var offsets = $(input).offset();
+                var top = offsets.top + 68;
+                inst.dpDiv.css({
+                    top: top,
+                    left: offsets.left,
+                });
+            }, 0);
+        }
     });
+
+    $(window).resize(function() {
+
+        //resize
+        $('.datepicker').datepicker('hide');
+
+    });//window resize
+
+
 
     //------------------------------------------------------------------------//
 
@@ -266,6 +285,9 @@ $(document).ready(function() {
       "Scheme"
     ];
     $( "#calcAddr" ).autocomplete({
+      source: availableTags
+    });
+    $( ".clAddr" ).autocomplete({
       source: availableTags
     });
 
