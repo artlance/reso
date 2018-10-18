@@ -126,7 +126,7 @@ $(document).ready(function() {
     //faq
     $('.faq-item-question').on('click', function(event) {
         event.preventDefault();
-        $(this).toggleClass('active').parents('.faq-item').find('.faq-item-answer').slideToggle(200);
+        $(this).toggleClass('active').parents('.faq-item').find('.faq-item-answer').toggle();
     });
 
     //------------------------------------------------------------------------//
@@ -155,6 +155,10 @@ $(document).ready(function() {
         changeMonth: true,
         changeYear: true,
         showOtherMonths: true,
+        showOn: "button",
+        buttonImage: '../upload/datepicker.svg',
+        buttonImageOnly: false,
+        buttonText: '',
         beforeShow: function (input, inst) {
             setTimeout(function () {
                 var offsets = $(input).offset();

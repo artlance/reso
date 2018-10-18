@@ -4107,6 +4107,21 @@ span.jFiler-icon-file.f-audio:after {
   padding: 11px 0 8px;
 }
 
+.ui-datepicker-trigger {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 68px;
+  border: 0;
+  background-color: transparent;
+  border-radius: 4px;
+}
+
+.ui-datepicker-trigger img {
+  display: none;
+}
+
 .ui-datepicker .ui-datepicker-header {
   position: relative;
   border-bottom: 1px solid #c1c1c1;
@@ -6056,16 +6071,32 @@ body.modal-open {
   padding: 30px 0 7px;
 }
 
-.clinics-header h1 {
+.clinics-header .h1 {
   font-size: 40px;
   line-height: 1.25;
   font-weight: 200;
   margin-bottom: 28px;
 }
 
-.clinics-header h1 strong {
+.clinics-header .h1 h1 {
+  display: inline-block;
+  font-weight: 200;
+  font-size: 100%;
+  margin-right: 10px;
+}
+
+select.select-transparent {
+  float: none;
+  width: auto;
+  padding: 0 !important;
+  height: auto;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: 0;
+  background: transparent;
   font-weight: 200;
   color: #3eac51;
+  font-size: 40px;
 }
 
 .clinics-filter-wrapper {
@@ -7122,16 +7153,19 @@ body.modal-open {
   .clinics-header {
     padding: 0;
   }
-  .clinics-header h1 {
+  .clinics-header .h1 {
     font-size: 20px;
     line-height: 1.5;
     font-weight: normal;
     margin-bottom: 0;
     padding: 13px 25px 12px 0;
   }
-  .clinics-header h1 strong {
+  .clinics-header .h1 strong {
     display: block;
     font-weight: normal;
+  }
+  .clinics-header select.select-transparent {
+    font-size: 20px;
   }
   .clinics-search {
     margin-bottom: 18px;

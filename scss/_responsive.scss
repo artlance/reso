@@ -717,7 +717,7 @@
     }
     .clinics-header {
         padding: 0;
-        h1 {
+        .h1 {
             font-size: 20px;
             line-height: 1.5;
             font-weight: normal;
@@ -727,6 +727,9 @@
                 display: block;
                 font-weight: normal;
             }
+        }
+        select.select-transparent {
+            font-size: 20px;
         }
     }
     .clinics-search {
