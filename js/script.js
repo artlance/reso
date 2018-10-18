@@ -265,28 +265,21 @@ $(document).ready(function() {
     //------------------------------------------------------------------------//
 
     var availableTags = [
-      "ActionScript",
-      "AppleScript",
-      "Asp",
-      "BASIC",
-      "C",
-      "C++",
-      "Clojure",
-      "COBOL",
-      "ColdFusion",
-      "Erlang",
-      "Fortran",
-      "Groovy",
-      "Haskell",
-      "Java",
-      "JavaScript",
-      "Lisp",
-      "Perl",
-      "PHP",
-      "Python",
-      "Ruby",
-      "Scala",
-      "Scheme"
+        "Москва",
+        "Санкт-Петербург",
+        "Новосибирск",
+        "Екатеринбург",
+        "Нижний Новгород",
+        "Казань",
+        "Челябинск",
+        "Омск",
+        "Самара",
+        "Ростов-на-Дону",
+        "Уфа",
+        "Красноярск",
+        "Пермь",
+        "Воронеж",
+        "Волгоград"
     ];
     $( "#calcAddr" ).autocomplete({
       source: availableTags
