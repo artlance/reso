@@ -6661,6 +6661,8 @@ select.select-transparent {
   .calculate-panel-section-tablet.is_stuck {
     left: 20px;
     right: 20px;
+    bottom: 0 !important;
+    top: auto !important;
   }
   .calculate-panel-section-tablet.is_stuck_bot {
     left: 0;

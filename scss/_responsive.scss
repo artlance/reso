@@ -256,6 +256,8 @@
         &.is_stuck {
             left: 20px;
             right: 20px;
+            bottom: 0 !important;
+            top: auto !important;
         }
         &.is_stuck_bot {
             left: 0;

@@ -413,6 +413,8 @@ $(document).ready(function() {
         if ($(".calculate-panel-section-tablet").is(":visible")) {
             setTimeout(function(){
                 var tabletOffsetTop = $('body').innerHeight() - $(".calculate-panel-section-tablet").innerHeight();
+                console.log(tabletOffsetTop);
+                $(".calculate-panel-section-tablet").trigger("sticky_kit:detach");
                 $(".calculate-panel-section-tablet").stick_in_parent({offset_top: tabletOffsetTop})
                 .on("sticky_kit:bottom", function(e) {
                     $(".calculate-panel-section-tablet").addClass('is_stuck_bot');
@@ -420,6 +422,7 @@ $(document).ready(function() {
                   .on("sticky_kit:unbottom", function(e) {
                     $(".calculate-panel-section-tablet").removeClass('is_stuck_bot');
                   });
+                $(".calculate-panel-section-tablet").trigger("sticky_kit:recalc");
             }, 10);
         } else {
             $(".calculate-panel-section-tablet").trigger("sticky_kit:detach");
