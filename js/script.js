@@ -400,7 +400,38 @@ $(document).ready(function() {
 
     //------------------------------------------------------------------------//
 
-    $("#stick-sidebar").stick_in_parent({offset_top: 60});
+    function stickChk() {
+
+        if ($("#stick-sidebar").is(":visible")) {
+            setTimeout(function(){
+                $("#stick-sidebar").stick_in_parent({offset_top: 60}).trigger("sticky_kit:recalc");
+            }, 10);
+        } else {
+            $("#stick-sidebar").trigger("sticky_kit:detach");
+        }
+
+        if ($(".calculate-panel-section-tablet").is(":visible")) {
+            setTimeout(function(){
+                var tabletOffsetTop = $('body').innerHeight() - $(".calculate-panel-section-tablet").innerHeight();
+                $(".calculate-panel-section-tablet").stick_in_parent({offset_top: tabletOffsetTop})
+                .on("sticky_kit:bottom", function(e) {
+                    $(".calculate-panel-section-tablet").addClass('is_stuck_bot');
+                  })
+                  .on("sticky_kit:unbottom", function(e) {
+                    $(".calculate-panel-section-tablet").removeClass('is_stuck_bot');
+                  });
+            }, 10);
+        } else {
+            $(".calculate-panel-section-tablet").trigger("sticky_kit:detach");
+        }
+
+    }
+
+    stickChk();
+
+    $(window).resize(function() {
+        stickChk();
+    });//window resize
 
     //------------------------------------------------------------------------//
 
