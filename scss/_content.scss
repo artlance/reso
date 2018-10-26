@@ -490,6 +490,19 @@
     font-size: 20px;
     font-weight: 500;
     padding-bottom: 13px;
+    @extend .clearfix;
+}
+.calculate-label-delete {
+    opacity: 0.7;
+    float: right;
+    margin-left: 30px;
+    font-size: 14px;
+    font-weight: normal;
+    color: $text;
+    margin-top: 6px;
+    &:hover {
+        color: $red;
+    }
 }
 .calculate-label-no {
     height: 0;
