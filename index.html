@@ -1245,7 +1245,7 @@
                                         <!-- /.calculate-row -->
                                         <div class="calculate-row-divider"></div>
                                         <div class="calculate-row">
-                                            <div class="calculate-row-title">Группа 1</div>
+                                            <div class="calculate-row-title"><a href="#" class="calculate-label-delete">Удалить</a>Группа 1</div>
                                             <div class="calculate-cell calculate-cell-x3">
                                                 <div class="calculate-label"><label for="calcAge">Возрастная группа</label></div>
                                                 <div class="calculate-input">
@@ -1277,7 +1277,7 @@
                                             <div class="calculate-cell calculate-cell-x3">
                                                 <div class="calculate-label"><label for="calcYears">Период страхования</label></div>
                                                 <div class="calculate-input">
-                                                    <input type="text" class="input-text" value="1 год" id="calcYears" name="calcYears">
+                                                    <input type="text" class="input-text" value="1 год" id="calcYears" name="calcYears" disabled="disabled">
                                                 </div>
                                                 <!-- /.calculate-input -->
                                             </div>
@@ -1294,8 +1294,8 @@
                                             <div class="calculate-cell calculate-cell-x3">
                                                 <div class="calculate-label hide-on-sm">&nbsp;</div>
                                                 <div class="calculate-input">
-                                                    <label for="calcDateTo" class="label-date">Дата окончания</label>
-                                                    <input type="text" class="input-text input-text-date input-text-date-small datepicker" readonly value="28.02.2018" id="calcDateTo" name="calcDateTo">
+                                                    <label for="calcDateTo" class="label-date label-date-disabled">Дата окончания</label>
+                                                    <input type="text" class="input-text input-text-date input-text-date-small datepicker" readonly value="28.02.2018" id="calcDateTo" name="calcDateTo" disabled="disabled">
                                                 </div>
                                                 <!-- /.calculate-input -->
                                             </div>
@@ -1483,7 +1483,7 @@
                                             <div class="calculate-cell calculate-cell-x2">
                                                 <div class="calculate-label"><label for="calcINN">Реквизиты ИП</label></div>
                                                 <div class="calculate-input">
-                                                    <input type="text" class="input-text" placeholder="ИНН" id="calcINN">
+                                                    <input type="text" class="input-text calRequisites" placeholder="ИНН" id="calcINN">
                                                 </div>
                                                 <!-- /.calculate-input -->
                                             </div>
@@ -1533,6 +1533,21 @@
                                                         <!-- /.radio -->
                                                     </div>
                                                     <!-- /.sex -->
+                                                </div>
+                                                <!-- /.calculate-input -->
+                                            </div>
+                                            <!-- /.calculate-cell -->
+                                            <div class="calculate-cell-clear"></div>
+                                            <div class="calculate-cell calculate-cell-x3">
+                                                <div class="calculate-input">
+                                                    <input type="text" class="input-text" placeholder="Серия паспорта">
+                                                </div>
+                                                <!-- /.calculate-input -->
+                                            </div>
+                                            <!-- /.calculate-cell -->
+                                            <div class="calculate-cell calculate-cell-x3">
+                                                <div class="calculate-input">
+                                                    <input type="text" class="input-text" placeholder="Номер паспорта">
                                                 </div>
                                                 <!-- /.calculate-input -->
                                             </div>

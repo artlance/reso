@@ -287,6 +287,15 @@ $(document).ready(function() {
     $( ".clAddr" ).autocomplete({
       source: availableTags
     });
+    var availableRequisites = [
+        'АО "АИ" ИНН: 5047192113',
+        'АО "ЭК/СОЛЮШНС" ИНН: 7725542532'
+    ];
+    $( ".calRequisites" ).autocomplete({
+      source: availableRequisites
+    });
+
+
 
     //------------------------------------------------------------------------//
 

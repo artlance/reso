@@ -245,7 +245,7 @@ img {
   font-size: 0;
 }
 
-.clearfix::after, .wysiwyg::after, .calculate-input::after, .calculate-label::after {
+.clearfix::after, .wysiwyg::after, .calculate-input::after, .calculate-label::after, .calculate-row-title::after {
   clear: both;
   content: "";
   display: table;
@@ -2823,6 +2823,11 @@ input.input-text:focus, textarea.textarea:focus {
   border-color: #aaaaaa;
 }
 
+input.input-text:disabled, textarea.textarea:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
 input.input-text::-webkit-input-placeholder, textarea.textarea::-webkit-input-placeholder {
   color: #9c9c9c;
 }
@@ -2908,7 +2913,7 @@ select.ui-datepicker-year::-ms-expand {
 
 .checkbox input:disabled + label,
 .radio input:disabled + label {
-  opacity: 0.5;
+  opacity: 0.3;
 }
 
 .checkbox label,
@@ -3033,6 +3038,10 @@ button.button.disabled {
   left: 30px;
 }
 
+.label-date-disabled {
+  opacity: 0.3;
+}
+
 input.input-text-num {
   text-align: center;
 }
@@ -3049,6 +3058,10 @@ input.input-text-date {
   border: 0;
   -webkit-box-shadow: 0px 1px 7px 0px rgba(0, 1, 1, 0.15);
   box-shadow: 0px 1px 7px 0px rgba(0, 1, 1, 0.15);
+}
+
+input.input-text-date:disabled + button {
+  display: none !important;
 }
 
 input.input-text-date-small {
@@ -5262,6 +5275,10 @@ span.jFiler-icon-file.f-audio:after {
 
 .calculate-label-delete:hover {
   color: #ff0000;
+}
+
+.calculate-row-title .calculate-label-delete {
+  margin-top: 8px;
 }
 
 .calculate-label-no {

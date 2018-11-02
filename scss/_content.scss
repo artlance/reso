@@ -504,6 +504,12 @@
         color: $red;
     }
 }
+.calculate-row-title {
+    @extend .clearfix;
+    .calculate-label-delete {
+        margin-top: 8px;
+    }
+}
 .calculate-label-no {
     height: 0;
     padding-bottom: 0 !important;
