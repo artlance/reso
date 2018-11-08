@@ -505,6 +505,13 @@ $(document).ready(function() {
         $('.row-hidden').removeClass('row-hidden');
     });
 
+    //------------------------------------------------------------------------//
+
+    $('.accepted-close').on('click', function(event) {
+        event.preventDefault();
+        $('.accepted').fadeOut(150);
+    });
+
 }); //document ready
 
 //*********************************************************************//

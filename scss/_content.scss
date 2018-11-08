@@ -1187,3 +1187,26 @@ body.modal-open {
     line-height: 1.6667;
     margin-bottom: 21px;
 }
+.ui-autocomplete li:hover {
+    background-color: $p;
+    color: $w;
+}
+.accepted {
+    padding: 30px 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #ccc;
+    box-shadow: 0 1px 10px rgba(0, -1, 1, 0.15);
+}
+.accepted-wrapper {
+    font-size: 13px;
+    position: relative;
+    padding-right: 60px;
+}
+.accepted-close {
+    top: 50%;
+    box-shadow: none;
+    transform: translate3d(0, -50%, 0);
+}

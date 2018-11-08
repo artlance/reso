@@ -6099,6 +6099,36 @@ body.modal-open {
   margin-bottom: 21px;
 }
 
+.ui-autocomplete li:hover {
+  background-color: #3eac51;
+  color: #ffffff;
+}
+
+.accepted {
+  padding: 30px 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ccc;
+  -webkit-box-shadow: 0 1px 10px rgba(0, 0, 1, 0.15);
+  box-shadow: 0 1px 10px rgba(0, 0, 1, 0.15);
+}
+
+.accepted-wrapper {
+  font-size: 13px;
+  position: relative;
+  padding-right: 60px;
+}
+
+.accepted-close {
+  top: 50%;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-transform: translate3d(0, -50%, 0);
+  transform: translate3d(0, -50%, 0);
+}
+
 .clinics-header {
   padding: 30px 0 7px;
 }
